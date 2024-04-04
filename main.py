@@ -16,6 +16,7 @@ search_url = base_url + "search"
 
 ########################### FUNCTIONS ###########################
 def get_access_token():
+    """Get the access token."""
     # Authorization Data
     auth_url = "https://accounts.spotify.com/api/token"
     data     = {
@@ -32,6 +33,7 @@ def get_access_token():
     return access_token
 
 def get_headers():
+    """GET request headers."""
     access_token = get_access_token()
     headers      = {
         "Authorization": "Bearer {token}".format(token=access_token),
@@ -40,6 +42,7 @@ def get_headers():
     return headers
 
 def build_params(artist, track):
+    """Build parameters for GET request."""
     params = {
         "q"     : artist + " " + track,
         "artist": artist,
@@ -51,6 +54,7 @@ def build_params(artist, track):
     return params
 
 def search_for_track(search_url, artist, track):
+    """Search for the track. (https://developer.spotify.com/documentation/web-api/reference/search)"""
     # Setting up headers and params for a GET request
     headers = get_headers()
     params  = build_params(artist, track)
@@ -64,6 +68,7 @@ def search_for_track(search_url, artist, track):
     return items
 
 def build_results(search):
+    """Return the results as a dictionary."""
     results = {}
 
     track   = search["tracks"]["items"][0]
