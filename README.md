@@ -1,11 +1,26 @@
 # Music-Tag-Fixer
-This project uses Spotify API to get data for a music track by its artist name and title.
+![Static Badge](https://img.shields.io/badge/project%20status-in%20progress-yellow?style=for-the-badge&logo=github&logoColor=white)
+
+A Python project that uses Spotify API to get data for a music track by its artist name and title.
+
+## Pending
+![Static Badge](https://img.shields.io/badge/pending-code-orange?style=flat-square&logo=python&logoColor=white)
+
+- Complete the code.
+- Freeze requirments.
+
+![Static Badge](https://img.shields.io/badge/pending-package-orange?style=flat-square&logo=python&logoColor=white)
+
+- Package the project.
+
+![Static Badge](https://img.shields.io/badge/pending-readme-orange?style=flat-square&logo=markdown&logoColor=white)
+
+- Update README.
 
 ## Requirments
-### Create a Virtual Enviroment and Activate it
+### Create a Virtual Enviroment
 ```bash
 py -m venv venv
-.\venv\Scripts\activate
 ```
 
 ### Install Dependencies
@@ -24,7 +39,13 @@ CLIENT_ID     = blahblahblah
 CLIENT_SECRET = blahblahblah
 ```
 
-## Run the script
+## Start
+### Activate it the Virtual Enviroment
+```bash
+.\venv\Scripts\activate
+```
+
+### Run the script
 ```bash
 py .\main.py
 ```
